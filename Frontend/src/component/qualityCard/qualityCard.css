@@ -1,0 +1,8 @@
+
+.quality-card img{
+    transition: 1.5s ease-in-out transform;
+}
+
+.quality-card:hover img{
+transform: rotateY(180deg);
+}

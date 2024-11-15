@@ -1,0 +1,54 @@
+.bg-purple{
+    background: #f0e0ff;
+}
+
+.banner{
+    align-items: flex-end;
+    display: flex;
+    overflow: hidden;
+}
+
+.slider-content{
+    padding: 165px 0 0 30px;
+}
+
+.slider-content h1{
+    color: #010101;
+    font-size: 72px;
+    line-height: 104px;
+    margin: 6px 0 37px;
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+}
+
+.banner-btn a{
+    border: 1px solid #333;
+    color: #010101;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 1;
+    padding: 19px 50px 21px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+.banner-btn a:hover{
+    border: 1px solid #a749ff;
+    color: #fff;
+}
+.banner-btn a::before{
+    bottom: 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    transition: all .5s cubic-bezier(.645,.045,.355,1);
+    width: 100%;
+    z-index: -1;
+}
+
+.banner-btn a::after{
+    background: #a749ff;
+    left: auto;
+    right: 0;
+    width: 0;
+}
