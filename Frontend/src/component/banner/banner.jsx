@@ -6,7 +6,7 @@ const Banner = () => {
     <>
       <div className="banner bg-purple ">
         <div className="container">
-          <div className="row pt-5">
+          <div className="row pt-5 ">
           
             <div className="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6" data-aos="fade-right">
               <div className="slider-content">
@@ -20,7 +20,7 @@ const Banner = () => {
               </div>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-12 col-sm-6 " data-aos="fade-left">
-              <img src={img1} className="w-100" />
+              <img src={img1} className="w-100 banner-img" />
             </div>
           </div>
         </div>

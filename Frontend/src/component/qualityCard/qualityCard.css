@@ -6,3 +6,13 @@
 .quality-card:hover img{
 transform: rotateY(180deg);
 }
+
+
+@media only screen and (max-width:576px){
+    /* .parent-quality-card{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+    } */
+}
