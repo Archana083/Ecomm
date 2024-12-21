@@ -48,7 +48,7 @@ useEffect(() =>{
             </p>
           </div>
 
-          <Link className="add_crt_btn" onClick={(e)=>{ e.preventDefault(); dispatch(item.id)}}>remove from Cart</Link>
+          <button className="add_crt_btn" onClick={(e)=> dispatch(item.id)}>remove from Cart</button>
         </div>
       </div>
    
