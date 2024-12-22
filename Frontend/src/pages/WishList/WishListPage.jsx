@@ -55,7 +55,7 @@ console.log(wishList);
        {item.description}
           </p>
         </div>
-        <button className="add_crt_btn" onClick={addtocart} >add to cart</button> <br/>
+        <button className="add_crt_btn" onClick={()=>addtocart(item)} >add to cart</button> <br/>
         <button className="add_crt_btn" onClick={() => dispatch(removeFromWishlist(item.id))}>remove from Wishlist</button>
       </div>
     </div>  

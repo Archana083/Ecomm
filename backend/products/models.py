@@ -18,16 +18,32 @@ class User(AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username']
 
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name="custom_user_groups",  # Custom related name
+        blank=True,
+        help_text='The groups this user belongs to.'
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name="custom_user_permissions",  # Custom related name
+        blank=True,
+        help_text='Specific permissions for this user.'
+    )
+
 
     def profile(self):
-        profile = Profile.objects.get(user=self)
+         profile = Profile.objects.filter(user=self).first()
 
 class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
     full_name = models.CharField(max_length=1000)
     bio = models.CharField(max_length=100)
     image = models.ImageField(upload_to="user_images", default="default.jpg")
     verified = models.BooleanField(default=False)
+
+    def __str__(self):
+       return self.full_name or f"Profile of {self.user.email}"
 
 def create_user_profile(sender, instance, created, **kwargs):
     if created:

@@ -113,11 +113,62 @@
         "documentation": {}
     },
     {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
         "label": "models",
         "importPath": "django.db",
         "description": "django.db",
         "isExtraImport": true,
         "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "django.contrib.auth.models",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
+        "label": "django.db.models.deletion",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.db.models.deletion",
+        "description": "django.db.models.deletion",
+        "detail": "django.db.models.deletion",
+        "documentation": {}
+    },
+    {
+        "label": "django.utils.timezone",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "django.utils.timezone",
+        "description": "django.utils.timezone",
+        "detail": "django.utils.timezone",
         "documentation": {}
     },
     {
@@ -134,14 +185,6 @@
         "description": "django.db.models.signals",
         "isExtraImport": true,
         "detail": "django.db.models.signals",
-        "documentation": {}
-    },
-    {
-        "label": "AbstractUser",
-        "importPath": "django.contrib.auth.models",
-        "description": "django.contrib.auth.models",
-        "isExtraImport": true,
-        "detail": "django.contrib.auth.models",
         "documentation": {}
     },
     {
@@ -251,7 +294,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "SECRET_KEY = 'django-insecure-_4y1lxv6%#+7dw8642+*b!y@v8d(@o-tleh^azexo1x+qy%j!o'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-_4y1lxv6%#+7dw8642+*b!y@v8d(@o-tleh^azexo1x+qy%j!o'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -260,7 +303,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -269,7 +312,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "ALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'products',",
+        "peekOfCode": "ALLOWED_HOSTS = ['*']\n# Application definition\nINSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -278,7 +321,7 @@
         "kind": 5,
         "importPath": "backend.backend.settings",
         "description": "backend.backend.settings",
-        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'products',\n    'corsheaders',\n    'rest_framework',",
+        "peekOfCode": "INSTALLED_APPS = [\n    'jazzmin',\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'products',\n    'corsheaders',",
         "detail": "backend.backend.settings",
         "documentation": {}
     },
@@ -436,6 +479,15 @@
         "documentation": {}
     },
     {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "backend.products.migrations.0002_user_profile",
+        "description": "backend.products.migrations.0002_user_profile",
+        "peekOfCode": "class Migration(migrations.Migration):\n    dependencies = [\n        ('auth', '0012_alter_user_first_name_max_length'),\n        ('products', '0001_initial'),\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='User',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),",
+        "detail": "backend.products.migrations.0002_user_profile",
+        "documentation": {}
+    },
+    {
         "label": "ProductsConfig",
         "kind": 6,
         "importPath": "backend.products.apps",
@@ -458,7 +510,7 @@
         "kind": 6,
         "importPath": "backend.products.models",
         "description": "backend.products.models",
-        "peekOfCode": "class User(AbstractUser):\n    username = models.CharField(max_length=100)\n    email = models.EmailField(unique=True)\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = ['username']\n    def profile(self):\n        profile = Profile.objects.get(user=self)\nclass Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    full_name = models.CharField(max_length=1000)",
+        "peekOfCode": "class User(AbstractUser):\n    username = models.CharField(max_length=100)\n    email = models.EmailField(unique=True)\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = ['username']\n    groups = models.ManyToManyField(\n        'auth.Group',\n        related_name=\"custom_user_groups\",  # Custom related name\n        blank=True,\n        help_text='The groups this user belongs to.'",
         "detail": "backend.products.models",
         "documentation": {}
     },
@@ -467,7 +519,7 @@
         "kind": 6,
         "importPath": "backend.products.models",
         "description": "backend.products.models",
-        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    full_name = models.CharField(max_length=1000)\n    bio = models.CharField(max_length=100)\n    image = models.ImageField(upload_to=\"user_images\", default=\"default.jpg\")\n    verified = models.BooleanField(default=False)\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)\ndef save_user_profile(sender, instance, **kwargs):",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name=\"profile\")\n    full_name = models.CharField(max_length=1000)\n    bio = models.CharField(max_length=100)\n    image = models.ImageField(upload_to=\"user_images\", default=\"default.jpg\")\n    verified = models.BooleanField(default=False)\n    def __str__(self):\n       return self.full_name or f\"Profile of {self.user.email}\"\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:",
         "detail": "backend.products.models",
         "documentation": {}
     },
