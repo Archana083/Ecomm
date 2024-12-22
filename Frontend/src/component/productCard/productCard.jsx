@@ -9,6 +9,7 @@ import img5 from "../../assets/7.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { Modal, Button } from "react-bootstrap";
 import { add } from "../../Api/cartSlice";
+import { addToWishlist } from "../../Api/WishlistSlice";
 
 
 const ProductCard = ({ image, description, price }) => {
@@ -20,10 +21,7 @@ const ProductCard = ({ image, description, price }) => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  const handleMainImage = (img) => {
-    setMainImage(img);
-  };
-
+ 
   const truncateDiscription = (description, maxlength) => {
     if (description.length > maxlength) {
       return description.substring(0, maxlength) + "...";
@@ -33,7 +31,13 @@ const ProductCard = ({ image, description, price }) => {
 
   const addTocart = () =>{
     const product = {  id: Date.now(), image, description, price };
-  dispatch(add(product ));
+  dispatch(add(product));
+
+  }
+
+  const handleAddToWishlist = () =>{
+    const product = {  id: Date.now(), image, description, price };
+  dispatch(addToWishlist(product ));
 
   }
 
@@ -46,7 +50,8 @@ const ProductCard = ({ image, description, price }) => {
           </div>
           <div className="product-action">
             <div className=" wishlist same-background">
-              <i className="bi bi-heart"></i>
+            <Link onClick={handleAddToWishlist}>  <i className="bi bi-heart"></i></Link>
+           
             </div>
             <div className="buy-now same-background">
               <Link className="btn-buy">Buy Now</Link>

@@ -13,6 +13,8 @@ const Navbar = () => {
 
   const cart = useSelector(state => state.cart); 
    console.log(cart.length);
+
+   const wishList = useSelector(state => state.wishlist)
    
   
 
@@ -75,16 +77,22 @@ const Navbar = () => {
             <div>
               <i onClick={() => setIsActive2((prevState) => !prevState)}  className="bi bi-person-circle"></i>
             </div>
+
             <div className="count-parent">
-              <i className="bi bi-heart ">
-                <span className="count-style">0</span>
+            <Link to='/wishlist'>
+              <i className="bi bi-heart text-dark">
+                <span className="count-style">{wishList.length}</span>
               </i>
+              </Link>
             </div>
+
             <div className={`search-bar ${isActive ? "active" : ""} `}>
               <form action="#">
                 <input type="text" placeholder="Search" />
                 <button className="button-search">
+           
                   <i className="bi bi-search"></i>
+                 
                 </button>
               </form>
             </div>

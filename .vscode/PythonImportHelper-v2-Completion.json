@@ -129,6 +129,22 @@
         "documentation": {}
     },
     {
+        "label": "post_save",
+        "importPath": "django.db.models.signals",
+        "description": "django.db.models.signals",
+        "isExtraImport": true,
+        "detail": "django.db.models.signals",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractUser",
+        "importPath": "django.contrib.auth.models",
+        "description": "django.contrib.auth.models",
+        "isExtraImport": true,
+        "detail": "django.contrib.auth.models",
+        "documentation": {}
+    },
+    {
         "label": "serializers",
         "importPath": "rest_framework",
         "description": "rest_framework",
@@ -433,7 +449,43 @@
         "kind": 6,
         "importPath": "backend.products.models",
         "description": "backend.products.models",
-        "peekOfCode": "class Product(models.Model):\n    image = models.ImageField(upload_to=\"product_images/\")\n    description = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    def __str__(self):\n        return self.description",
+        "peekOfCode": "class Product(models.Model):\n    image = models.ImageField(upload_to=\"product_images/\")\n    description = models.CharField(max_length=255)\n    price = models.DecimalField(max_digits=10, decimal_places=2)\n    def __str__(self):\n        return self.description\nclass User(AbstractUser):\n    username = models.CharField(max_length=100)\n    email = models.EmailField(unique=True)\n    USERNAME_FIELD = 'email'",
+        "detail": "backend.products.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "backend.products.models",
+        "description": "backend.products.models",
+        "peekOfCode": "class User(AbstractUser):\n    username = models.CharField(max_length=100)\n    email = models.EmailField(unique=True)\n    USERNAME_FIELD = 'email'\n    REQUIRED_FIELDS = ['username']\n    def profile(self):\n        profile = Profile.objects.get(user=self)\nclass Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    full_name = models.CharField(max_length=1000)",
+        "detail": "backend.products.models",
+        "documentation": {}
+    },
+    {
+        "label": "Profile",
+        "kind": 6,
+        "importPath": "backend.products.models",
+        "description": "backend.products.models",
+        "peekOfCode": "class Profile(models.Model):\n    user = models.OneToOneField(User, on_delete=models.CASCADE)\n    full_name = models.CharField(max_length=1000)\n    bio = models.CharField(max_length=100)\n    image = models.ImageField(upload_to=\"user_images\", default=\"default.jpg\")\n    verified = models.BooleanField(default=False)\ndef create_user_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)\ndef save_user_profile(sender, instance, **kwargs):",
+        "detail": "backend.products.models",
+        "documentation": {}
+    },
+    {
+        "label": "create_user_profile",
+        "kind": 2,
+        "importPath": "backend.products.models",
+        "description": "backend.products.models",
+        "peekOfCode": "def create_user_profile(sender, instance, created, **kwargs):\n    if created:\n        Profile.objects.create(user=instance)\ndef save_user_profile(sender, instance, **kwargs):\n    instance.profile.save()\npost_save.connect(create_user_profile, sender=User)\npost_save.connect(save_user_profile, sender=User)",
+        "detail": "backend.products.models",
+        "documentation": {}
+    },
+    {
+        "label": "save_user_profile",
+        "kind": 2,
+        "importPath": "backend.products.models",
+        "description": "backend.products.models",
+        "peekOfCode": "def save_user_profile(sender, instance, **kwargs):\n    instance.profile.save()\npost_save.connect(create_user_profile, sender=User)\npost_save.connect(save_user_profile, sender=User)",
         "detail": "backend.products.models",
         "documentation": {}
     },

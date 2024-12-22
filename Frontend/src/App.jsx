@@ -12,6 +12,7 @@ import ProductCard from './component/productCard/productCard';
 import ProductList from './pages/product/ProductList';
 import CartPage from './pages/cart/cartPage';
 import ContactPage from './pages/contact/contact';
+import WishListPage from './pages/WishList/WishListPage';
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
         <Route path='/productlist' element={<ProductList/>} />
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/contact' element={<ContactPage/>} />
+        <Route path='/wishlist' element={<WishListPage/>} />
 
       </Route>
     </Routes>
