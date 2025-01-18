@@ -3,6 +3,7 @@ import ProductCard from "../../component/productCard/productCard";
 import { images } from "./ProductData";
 import {useDispatch, useSelector} from 'react-redux';
 import {getProduct} from "../../Api/productDetailSLice"
+import Loader from "../../component/Loader/Loader";
 
 
 const ProductList = () => {
@@ -21,8 +22,10 @@ const ProductList = () => {
   
   return (
     <>
-  
-    <div className="container mt-5">
+  {
+    loading ? <Loader/> : 
+    product.length > 0 ? (
+      <div className="container mt-5">
      <div className="row">
       {product.map((product) => (
         <ProductCard
@@ -34,6 +37,12 @@ const ProductList = () => {
       ))}
       </div>
       </div>
+    ): 
+    <div className="d-flex justify-content-center items-center">
+          <p>No Data Found</p>
+        </div> 
+  }
+   
     </>
   );
 };
