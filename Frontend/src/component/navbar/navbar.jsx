@@ -50,13 +50,7 @@ const Navbar = () => {
                 <Link className="nav-link active" aria-current="page" to="/">
                   Home
                 </Link>
-              </li>
-
-              <li className="nav-item mx-3">
-                <a className="nav-link active" aria-current="page" href="#">
-                  Category
-                </a>
-              </li>
+              </li>            
               <li className="nav-item mx-3">
                 <Link className="nav-link active" aria-current="page" to="/productlist">
                   Collection
